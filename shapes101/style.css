@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+h1 {
+  background-image: url(https://c.tenor.com/FIlAXMHf8vsAAAAC/naruto-background.gif);
+  background-size: cover;
+  color: transparent;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-size: 5rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+
+#css-container {
+  margin: 5rem;
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.circle {
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+#line1{
+  border-left: 1px solid black;
+  margin-left: 25px;
+  height: 50px;
+}
+
+#line2{
+  border-top: 1px solid black;
+  width: 50px;
+  /* margin-bottom: 25px; */
+}
+
+#hoop{
+  background-color: white;
+  border: 1px solid red;
+}
+
+#oval{
+  width: 100px;
+}
+
+#trapezoid{
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  transform: skew(20deg);
+}
+
+/* this is a pseudo element, they create an element INSIDE the element in the html, either before or after the CONTENT inside your element */
+#circle-lines::before{ 
+  content: ""; /*content: is needed in order to the pseudo element to work*/
+  height: 50px;
+  width: 1px;
+  position: relative;
+  background-color: black;
+  z-index: 1;
+}
+
+#circle-lines::after{
+  content: "";
+  width: 50px;
+  height: 1px;
+  position: relative;
+  background-color: black;
+  z-index: 2;
+}
+
+/*/////////////// YOUTUBE////////// */
+#youtube {
+  height: 85px;
+  width: 85px;
+  position: relative;
+  background-color: red;
+  padding: 0 15px;
+  border-radius: 50% / 11%;
+}
